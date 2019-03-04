@@ -49,6 +49,7 @@ for state in states:
 	windTurbs = filterDF.size/24
 	
 	wtList.append(windTurbs)
+	#Threshhold
 	if(windTurbs > avgWT):
 		aboveAvgStates += 1
 		aboveAvgWT += windTurbs
@@ -57,7 +58,28 @@ for state in states:
 
 percent = 100 * (aboveAvgWT / float(totalWindTurbs))
 percent = (format(percent, '.2f'))
-aboveAvgOut = str(aboveAvgStates) + " states that have more than average wind Turbines.\nThey have a combined " + str(aboveAvgWT) + " wind turbines. \nThis means they account for " + str(percent) + "% of the wind turbines"
+aboveAvgOut = "There are " + str(aboveAvgStates) + " states that have more than average wind Turbines.\nThey have a combined " + str(aboveAvgWT) + " wind turbines. \nThis means they account for " + str(percent) + "% of the wind turbines"
+print(aboveAvgOut)
+
+print("")
+belowAvgWT = 0
+belowAvgStates = 0
+for state in states:
+	thisState = state + " has "
+	filterDF = df[ df['t_state'] == state]
+	windTurbs = filterDF.size/24
+	
+	#Threshhold
+	if(windTurbs < 100):
+		belowAvgStates += 1
+		belowAvgWT += windTurbs
+		thisState = thisState + str(windTurbs) + " wind turbines"
+		print(thisState)
+
+
+percent = 100 * (belowAvgWT / float(totalWindTurbs))
+percent = (format(percent, '.2f'))
+aboveAvgOut = "There are " + str(belowAvgStates) + " states have < 100 wind Turbines.\nThey have a combined " + str(belowAvgWT) + " wind turbines. \nThis means they account for " + str(percent) + "% of the wind turbines"
 print(aboveAvgOut)
 
 
