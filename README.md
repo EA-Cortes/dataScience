@@ -15,4 +15,4 @@
 - There are 15 states that each have less than 50 wind turbines
 	- Combined, they have a total of 55 wind turbines.
 	- This means that combined, they account for 0.09%... 😔😔😔
-[Results Graph](https://github.com/EA-Cortes/dataScience/blob/master/us_windTurbine/windTurbinesBarGraph.png)
+![Results Graph](https://github.com/EA-Cortes/dataScience/blob/master/us_windTurbine/windTurbinesBarGraph.png)
