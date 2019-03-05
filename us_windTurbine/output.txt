@@ -1,0 +1,36 @@
+There are a total of 58385 wind turbines in the US!
+There are an average of 1144 wind turbines per state
+However, only the following states are above average
+CA has 8681 wind turbines! 
+CO has 2289 wind turbines! 
+IL has 2719 wind turbines! 
+IN has 1229 wind turbines! 
+IA has 4445 wind turbines! 
+KS has 2951 wind turbines! 
+MI has 1114 wind turbines! 
+MN has 2485 wind turbines! 
+NE has 991 wind turbines! 
+NM has 1101 wind turbines! 
+NY has 1141 wind turbines! 
+ND has 1657 wind turbines! 
+OK has 3865 wind turbines! 
+OR has 1868 wind turbines! 
+TX has 13396 wind turbines! 
+WA has 1744 wind turbines! 
+WY has 1004 wind turbines! 
+
+There are 12 states that have more than average wind Turbines.
+They have a combined 47329 wind turbines. 
+This means they account for 81.06% of the wind turbines
+
+There are 17 states that have more 1000 wind Turbines.
+They have a combined 52680 wind turbines. 
+This means they account for 90.23% of the wind turbines
+
+There are 20 states have < 100 wind Turbines.
+They have a combined 441 wind turbines. 
+This means they account for 0.76% of the wind turbines
+
+There are 15 states have < 50 wind Turbines.
+They have a combined 55 wind turbines. 
+This means they account for 0.09% of the wind turbines
