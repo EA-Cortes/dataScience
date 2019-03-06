@@ -32,9 +32,9 @@ def purchasedByYear(state):
 	return purchaseList
 
 # 
-TXList = purchasedByYear("TX")
-CAList = purchasedByYear("CA")
-ILList = purchasedByYear("IL")
+# TXList = purchasedByYear("TX")
+# CAList = purchasedByYear("CA")
+# ILList = purchasedByYear("IL")
 
 
 # ------ # Function that pads the list for easier output # ------ # 
@@ -58,16 +58,12 @@ def padLists(lists):
 				item.append([appYear, 0])
 				appYear -= 1
 			item.reverse()
-			# print(item)
+
 		nn += 1
 
-padLists([TXList, CAList, ILList])
-texList = ["TX", TXList]
-
-print(texList)
 
 def getByState(states):
-	print("Get by state)")
+	# print("Get by state)")
 	
 	purchasedList = []
 	tempList = []
@@ -84,9 +80,6 @@ def getByState(states):
 	for s in stateList:
 		print("")
 		print(s)
-		# append[]
+	print("")
 	return purchasedList
-
-getByState(["TX", "CA", "IL", "IA"])
-# print(formattedOutput)
-print("")
+	
