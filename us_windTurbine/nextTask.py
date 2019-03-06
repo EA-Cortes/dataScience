@@ -1,6 +1,12 @@
 import pandas as pd 
 
+f = open("annualPurchasedByState.txt", "w")
+f = open("annualPurchasedByState.txt", "a")
+
+
 df = pd.read_csv("uswtdb_v1_3_20190107.csv")
+
+
 
 # print(df.dtypes)
 # print(df.head())
@@ -17,16 +23,16 @@ def purchasedByYear(state):
 	minYear = int(state_df['p_year'].min())
 	maxYear = int(state_df['p_year'].max())
 	output = "\nThe first wind turbine in " + state + " was purchased in: " + str(minYear) + ". The most recent was purchased in: " + str(maxYear) + ""
-	print(output)
+	f.write(output)
 	purchaseList = []
-	print("Year - Number of wind turbines bought")
+	f.write("\nYear - Number of wind turbines bought")
 	for year in range(minYear, maxYear+1):
 		filterDF = state_df[ state_df['p_year'] == year]
 		windTurbs = filterDF.size/24
 		n = windTurbs
 		# purchaseList.append((year, windTurbs))
-		innerO = "" + str(year) + " - " + str(windTurbs)
-		print(innerO)
+		innerO = "\n" + str(year) + " - " + str(windTurbs)
+		f.write(innerO)
 		purchaseList.append([year, windTurbs])
 	# print(purchaseList)
 	return purchaseList
@@ -77,9 +83,11 @@ def getByState(states):
 		stateList.append([state, tempList[i]])
 		i += 1
 	
+	
 	for s in stateList:
-		print("")
-		print(s)
-	print("")
+		f.write("\n\n")
+		f.write(str(s))
+
+
 	return purchasedList
 	
