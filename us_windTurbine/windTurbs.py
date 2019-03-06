@@ -12,6 +12,10 @@ import matplotlib.lines as mlines
 from matplotlib.lines import Line2D
 from collections import namedtuple
 
+import nextTask
+
+
+
 f = open("output.txt", "w")
 f = open("output.txt", "a")
 
@@ -30,13 +34,13 @@ wtList = []					# List of wint Turbines per state
 totalWindTurbs = 0			# Count the total wind turbines
 # Filter data by states
 for state in states:
-	thisState = state + " has "
+	thisState = "\n" + state + " has "
 	filterDF = df[ df['t_state'] == state]
 	windTurbs = filterDF.size/24
 	wtList.append(windTurbs)
 	totalWindTurbs += windTurbs
 	thisState = thisState + str(windTurbs) + " wind turbines"
-	# print(thisState)
+	f.write(thisState)
 
 
 avgWT = sum(wtList)/len(wtList)
@@ -183,7 +187,9 @@ plt.legend(loc='upper left', handles=[green_patch, cyan_patch, blue_patch, red_p
 
 
 
-plt.show()
+# plt.show()
+
+nextTask.getByState(["TX", "CA", "IL", "IA"])
 
 # The following may be useful to analyze the data using different parameters
 # ----- # Data Types # ----- #
